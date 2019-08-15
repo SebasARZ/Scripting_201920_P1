@@ -8,7 +8,8 @@ namespace Parcial1_Base.Logic
         /// The contestants collection.
         /// </summary>
         private List<Doll> contestants = new List<Doll>();
-
+        //private Doll[] contestants = new Doll[4];
+        
         /// <summary>
         /// Returns the total contestants count for a pageant round.
         /// </summary>
@@ -21,8 +22,11 @@ namespace Parcial1_Base.Logic
         /// <returns>True if the contestant could be added, False otherwise</returns>
         public bool AddContestant(Doll d)
         {
-            bool result = false;
-
+            bool result = true;
+            if(contestants.Count <4 && contestants.Count > 0)
+            {
+                result = false;
+            }
             return result;
         }
 

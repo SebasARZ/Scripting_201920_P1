@@ -43,7 +43,7 @@
 
         public Dress(int style, EColor color, EDressCategory category) : base(style)
         {
-            
+           
         }
 
         /// <summary>

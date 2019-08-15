@@ -11,7 +11,8 @@ namespace Parcial1_Base.Logic
         /// The accessories collection.
         /// </summary>
         private List<Accessory> accessories = new List<Accessory>();
-
+        bool HaveDress = true;
+        private Dress ActualDress;
         /// <summary>
         /// The doll's name
         /// </summary>
@@ -25,7 +26,7 @@ namespace Parcial1_Base.Logic
         /// <summary>
         /// The total accessories count worn by the doll.
         /// </summary>
-        public int TotalAccessories { get => accessories.Count; }
+        public int TotalAccessories { get => accessories.Count;   }
 
         public int BraceletCount { get => 0; }
 
@@ -46,8 +47,14 @@ namespace Parcial1_Base.Logic
         /// <returns>True if the accessory was being worn, then removed. False otherwise</returns>
         public bool Remove(Accessory a)
         {
-            bool result = false;
 
+            bool result = false;
+            result = true;
+            if(a is Dress)
+            {
+                result = true;
+            }
+            
             return result;
         }
 
@@ -58,7 +65,31 @@ namespace Parcial1_Base.Logic
         /// <returns>True if the doll successfully wore the accessory. False otherwise</returns>
         public bool Wear(Accessory a)
         {
-            return false;
+            bool result = true; 
+            
+               
+                if(a is Dress)
+                {
+                if(HaveDress == false)
+                {
+                    HaveDress = true;
+                    a = ActualDress;
+                }
+                else
+                {
+                    ActualDress = a;
+                }
+                    
+                }
+                
+
+                
+           
+            if(accessories.Count <4 && accessories.Count > 0 && HaveDress == true) { result = true; }else { result = false; } 
+            
+                
+            
+            return result;
         }
 
         /// <summary>
