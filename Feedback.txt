@@ -1,0 +1,20 @@
+Feedback
+
+* Hay errores de compilación en Doll.cs. No se hace el cast correctamente.
+* La lógica para agregar concursantes no agrega ninguna concursante, ni valida que la concursante ingresada ya esté en la competencia. Además, el resultado de la operación parece ser negativo si se cumple que hayan entre 1 y 4 concursantes. Es al contrario. (0.1 / 0.25)
+* No hay lógica para determinar a la concursante ganadora. (0.0 / 0.25)
+* No hay lógica para determinar que una concursante pueda participar si tiene un vestido equipado (0.0 / 0.5)
+* La lógica para equipar un accesorio está incompleta. Solo se valida el caso del vestido. Además, HaveDress jamás se hace falso. Por otro lado, por qué se valida contra un límite de conteo de accesorios de 3? (0.05 / 0.25)
+* No hay lógica para determinar que un collar puede equiparse con ciertos vestidos (0.0 / 0.25)
+* No hay lógica para incrementar el puntaje de estilo que da un bolso si es equipado con ciertos vestidos (0.0 / 0.25)
+* No hay lógica que limite las pulseras según el vestido equipado (0.0 / 1.0)
+* La lógica de desequipamiento de accesorios no es correcta. Siempre dirá que es exitosa, pero no desequipa nada; además, solo valida los vestidos (0.0 / 0.25); en consecuencia, tampoco hay lógica que desequipe todos los accesorios si el vestido es desequipado (0.0 / 0.5)
+
+Total funcionalidad: 0.1 / 3.5
+
+* Dado que no hay lógica que satisfaga la funcionalidad, no puede haber consideración al diseño orientado a objetos aplicado (0.0 / 1.5)
+
+Total diseño orientado a objetos: 0.0 / 1.5
+
+
+Total: (0.15 / 5.0)
